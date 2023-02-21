@@ -1,0 +1,33 @@
+FUNCTION dot_product(u,w:ARRAY_OF FLOAT[3]):FLOAT
+VAR 
+ps:FLOAT;
+BEGIN
+    
+    ps:=u[0]*w[0]+u[1]*w[1]+u[2]*w[2];
+    
+    RETURN ps;
+END
+
+
+ALGORITHM Dot product
+VAR
+    V1,V2:ARRAY_OF FLOAT[3];
+    i,j:INTEGER;
+    DP:FLOAT:=0;
+BEGIN
+
+    Write("type the coordinations of the vector V1:");
+    FOR i FROM 1 TO 3 DO
+        Read (V1[i]);
+    END_FOR
+
+    Write("type the coordinations of the vector V2:");
+    FOR j FROM 1 TO 3 DO
+        Read (V2[j]);
+    END_FOR
+
+    DP:=dot_product(V1,V2);
+
+    Write(DP):
+
+END
